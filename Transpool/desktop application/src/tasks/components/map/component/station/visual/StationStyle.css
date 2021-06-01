@@ -1,0 +1,8 @@
+.station-circle {
+    -fx-fill: BLUE;
+}
+
+.station-container {
+    -fx-cursor: HAND;
+}
+

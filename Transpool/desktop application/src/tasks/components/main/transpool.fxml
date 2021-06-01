@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../AddNewTrip/addTrip.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.components.main.TranspoolController">
+   <left>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <SplitPane dividerPositions="0.5" minHeight="300.0" minWidth="160.0" orientation="VERTICAL">
+              <items>
+                <AnchorPane maxHeight="100.0" minHeight="100.0" styleClass="up" stylesheets="@addTrip.css">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="11.0" text="Trips" textAlignment="JUSTIFY" textFill="#fcf9f9" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Levenim MT" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Accordion fx:id="tripAccordion" maxWidth="160.0" styleClass="up" stylesheets="@addTrip.css" />
+              </items>
+            </SplitPane>
+         </content>
+      </ScrollPane>
+   </left>
+   <right>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <SplitPane dividerPositions="0.5" minHeight="300.0" minWidth="160.0" orientation="VERTICAL">
+              <items>
+                <AnchorPane maxHeight="100.0" minHeight="100.0" styleClass="up" stylesheets="@addTrip.css">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="108.0" text="Trip requests" textFill="#fcf8f8" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Levenim MT" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Accordion fx:id="tripRequestAccordion" maxWidth="160.0" styleClass="up" stylesheets="@addTrip.css" />
+              </items>
+            </SplitPane>
+         </content>
+      </ScrollPane>
+   </right>
+   <bottom>
+      <ScrollPane fitToHeight="true" fitToWidth="true">
+         <content>
+            <HBox minHeight="100.0" minWidth="1100.0" prefHeight="100.0" prefWidth="200.0" styleClass="up" stylesheets="@addTrip.css">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="up" stylesheets="@addTrip.css">
+                           <children>
+                              <Label fx:id="dayLabel" layoutX="48.0" layoutY="24.0" text="Day : 1 " textFill="#faf8f8" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="13.0">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Levenim MT" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="up" stylesheets="@addTrip.css">
+                           <children>
+                              <Label fx:id="timeLabel" layoutX="62.0" layoutY="15.0" text="Time : 00:00" textFill="#f7f5f5" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="10.0">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Levenim MT" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <Label prefHeight="17.0" prefWidth="82.0" text="Jump in time:" textFill="#f7f4f4">
+                     <HBox.margin>
+                        <Insets left="100.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="forwardRadioButton" mnemonicParsing="false" text="Forword" textFill="#f7f3f3">
+                     <HBox.margin>
+                        <Insets left="25.0" top="25.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="forOrBack" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="backwardRadioButton" mnemonicParsing="false" text="Backword" textFill="#fffcfc" toggleGroup="$forOrBack">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <Label text="Time unit:" textFill="#f3f1f1">
+                     <HBox.margin>
+                        <Insets left="30.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="timeUnitChoiceBox" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="22.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#UpdateButtonAction" text="Update">
+                     <HBox.margin>
+                        <Insets left="15.0" top="22.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </bottom>
+   <top>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <content>
+            <GridPane minHeight="100.0" minWidth="1100.0" styleClass="up" stylesheets="@addTrip.css">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.79998779296875" minWidth="10.0" prefWidth="287.39996337890625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="990.6000366210938" minWidth="10.0" prefWidth="990.6000366210938" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="303.20001220703125" minHeight="10.0" prefHeight="104.19999694824219" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_CENTER" spacing="20.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadXmlButtonAction" prefHeight="25.0" prefWidth="155.0" text="Load xml">
+                           <font>
+                              <Font name="Levenim MT" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addNewTripButton" mnemonicParsing="false" onAction="#addNewTripButtonAction" prefHeight="25.0" prefWidth="155.0" text="Add new trip ">
+                           <font>
+                              <Font name="Levenim MT" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addNewTripRequestButton" mnemonicParsing="false" onAction="#addNewTripRequestButtonAction" prefHeight="29.0" prefWidth="155.0" text="Add new trip request">
+                           <font>
+                              <Font name="Levenim MT" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="matchButton" mnemonicParsing="false" onAction="#matchButtonAction" prefHeight="29.0" prefWidth="155.0" text="Find a match">
+                           <font>
+                              <Font name="Levenim MT" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="35.0" left="10.0" right="10.0" top="35.0" />
+                     </padding>
+                  </HBox>
+                  <ImageView fitHeight="195.0" fitWidth="286.0">
+                     <image>
+                        <Image url="@mito.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </top>
+   <center>
+      <ScrollPane fx:id="centerScrollPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

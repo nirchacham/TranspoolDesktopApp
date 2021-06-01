@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox onMouseClicked="#showStationDetails" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.components.map.component.station.visual.StationController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="40.0">
+         <image>
+            <Image url="@pin.png" />
+         </image>
+      </ImageView>
+   </children>
+</HBox>

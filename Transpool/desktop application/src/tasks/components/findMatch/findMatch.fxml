@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.components.findMatch.FindMatchController">
+   <content>
+      <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@addTrip.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.39996337890625" minWidth="10.0" prefWidth="194.79998779296875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.4000244140625" minWidth="10.0" prefWidth="244.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.4000244140625" minWidth="10.0" prefWidth="177.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="57.0" prefWidth="285.0" text="Choose trip request:" textFill="#f4f4f4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Levenim MT" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tripRequestChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ChoiceBox>
+            <Button fx:id="showTripButton" mnemonicParsing="false" onAction="#showTripButtonAction" prefHeight="25.0" prefWidth="150.0" text="Show Possible trips" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="Levenim MT" size="12.0" />
+               </font>
+            </Button>
+            <Label prefHeight="17.0" prefWidth="109.0" text="Choose trip:" textFill="#fcfcfc" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Levenim MT" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tripChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ChoiceBox>
+            <Button fx:id="assignButton" mnemonicParsing="false" onAction="#assignButtonAction" prefHeight="25.0" prefWidth="150.0" text="Assign trip request" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="Levenim MT" size="12.0" />
+               </font>
+            </Button>
+            <Label text="Find A Match" textFill="#fcfbfb">
+               <font>
+                  <Font name="Levenim MT" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Accordion fx:id="optionsAccordion" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Choose maximum number" textFill="#fefcfc">
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="of matches to display:" textFill="#f6f5f5">
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <TextField fx:id="maxMatchesTextField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox GridPane.rowIndex="3">
+               <children>
+                  <Label text="Do you want to recieve" textFill="#fefcfc">
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="trip offers with stops?" textFill="#fbf9f9">
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <RadioButton fx:id="yesRadioButton" mnemonicParsing="false" text="Yes" textFill="#fefdfd">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pref" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="noRadioButton" mnemonicParsing="false" text="No" textFill="#efeeee" toggleGroup="$pref">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Levenim MT" size="12.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>
