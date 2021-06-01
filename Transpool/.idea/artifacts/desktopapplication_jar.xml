@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="desktopapplication:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/desktopapplication_jar</output-path>
+    <root id="archive" name="desktop application.jar">
+      <element id="module-output" name="desktop application" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fxgraph-0.0.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
